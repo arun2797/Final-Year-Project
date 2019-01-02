@@ -1,0 +1,64 @@
+<% if not user_signed_in? %>
+
+    <div class="rows">
+      <div class="jumbotron">
+        <center>
+          <b><p style="color:#black;font-size:25px;"> YOU ARE LOGGED OUT. PLEASE LOG IN TO SEE LIVE FEED  </p></b>
+        </center>
+      </div>
+    </div>
+
+
+<% else %>
+    
+
+    <div class="rows">
+      <div class="jumbotron">
+        <center>
+          <b><p style="color:#black;font-size:25px;"> <b> USER: <%= current_user.email %></b> </p></b>
+        </center>
+      </div>
+    </div>
+
+
+<div class="rows">
+	
+
+  <div class="col-xs-3">	
+    		
+        <div class="panel panel-default">
+      			<div class="panel-body">
+        				<p><b> <%= current_user.email %></b> <p>
+                <p> USER INFO </p>
+    			   </div>
+        </div>
+
+
+	</div>
+
+	<div class="col-xs-6">
+
+  		<div class="panel panel-default">
+    			<div class="panel-body">
+            LIVE STREAMING VIDEO
+    				<%= video_tag "sunset.mp4", :size => "500x300", :controls => true %>
+  			  </div>
+  		</div>	
+
+  </div>
+
+
+	<div class="col-xs-3">
+		<div class="panel panel-default">
+  			<div class="panel-body">
+  			 Streaming From [Location]
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+<% end %>

@@ -1,0 +1,133 @@
+<% if not user_signed_in? %>
+
+    <div class="rows">
+      <div class="jumbotron">
+        <center>
+          <b><p style="color:#black;font-size:25px;"> YOU ARE LOGGED OUT. PLEASE LOG IN TO SEE LIVE FEED  </p></b>
+        </center>
+      </div>
+    </div>
+
+
+<% else %>
+
+
+<html>
+
+<head>
+
+
+  <style>
+        #photos {
+        opacity: .88;
+      }
+
+      #photos img {
+        width: 30%;
+        float: left;
+        display: block;
+        margin: 2px;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0px auto;
+        /*padding: 10px;*/
+        display: block;
+        max-width: 780px;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      #overlay {
+        background: rgba(0,0,0, .8);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        text-align: center;
+      }
+
+      #overlay img {
+        margin: 10% auto 0;
+        width: 550px;
+        border-radius: 5px;
+      }
+
+      #photos {
+        width: 100%;
+      }
+
+      #photo-gallery {
+        width: 100%;
+      }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="rows">
+      <div class="jumbotron">
+        <center>
+          <b><p style="color:#black;font-size:25px;vertical-align: center"> <b> IMAGES OF <%= current_user.email %></b> </p></b>
+        </center>
+      </div>
+    </div>
+
+<div id="photos">
+  <ul id="photo-gallery">
+    <li>
+      <a href="https://41.media.tumblr.com/0390d80d6c8cc4a7096033182a4bfe8a/tumblr_ndyvukSjNl1tubinno1_1280.jpg">
+        <img src="https://41.media.tumblr.com/0390d80d6c8cc4a7096033182a4bfe8a/tumblr_ndyvukSjNl1tubinno1_1280.jpg">
+      </a>
+    </li>
+    <li>
+      <a href="https://40.media.tumblr.com/bbe414414f4fd1f0b4886c6fcf4193de/tumblr_ndyvd3qoiL1tubinno1_1280.jpg">
+        <img src="https://40.media.tumblr.com/bbe414414f4fd1f0b4886c6fcf4193de/tumblr_ndyvd3qoiL1tubinno1_1280.jpg">
+      </a>
+    </li>
+    <li>
+      <a href="https://41.media.tumblr.com/3dde93f097de5e9db4f11b67729d6a2e/tumblr_na06dk1vWM1tubinno1_1280.jpg">
+        <img src="https://41.media.tumblr.com/3dde93f097de5e9db4f11b67729d6a2e/tumblr_na06dk1vWM1tubinno1_1280.jpg">
+      </a>
+    </li>
+    <li>
+      <a href="https://40.media.tumblr.com/e67b59d43c79c496b6fa8f1dddabef47/tumblr_nbc7zx6vJl1tubinno1_1280.jpg">
+        <img src="https://40.media.tumblr.com/e67b59d43c79c496b6fa8f1dddabef47/tumblr_nbc7zx6vJl1tubinno1_1280.jpg">
+      </a>
+    </li>
+    <li>
+      <a href="https://40.media.tumblr.com/d94d2a63ab509f403111c6e8ebfc22a4/tumblr_ndyfu61hzH1tubinno1_1280.jpg">
+        <img src="https://40.media.tumblr.com/d94d2a63ab509f403111c6e8ebfc22a4/tumblr_ndyfu61hzH1tubinno1_1280.jpg"></a>
+    </li>
+    <li>
+      <a href="https://40.media.tumblr.com/d7a014af6eaec53ccdc7a4171033f96d/tumblr_na06t4fnlI1tubinno1_1280.jpg">
+        <img src="https://40.media.tumblr.com/d7a014af6eaec53ccdc7a4171033f96d/tumblr_na06t4fnlI1tubinno1_1280.jpg">
+      </a>
+    </li>
+    <li>
+      <a href="https://40.media.tumblr.com/7302cf024c924726c6ad99bb80b0be41/tumblr_nauccbKUCw1tubinno1_1280.jpg">
+        <img src="https://40.media.tumblr.com/7302cf024c924726c6ad99bb80b0be41/tumblr_nauccbKUCw1tubinno1_1280.jpg">
+      </a>
+    </li>
+    <li>
+      <a href="https://41.media.tumblr.com/fddb3f2b0bdf390efd7ea87372e75fa5/tumblr_ndyg3pYbKW1tubinno1_1280.jpg"><img src="https://41.media.tumblr.com/fddb3f2b0bdf390efd7ea87372e75fa5/tumblr_ndyg3pYbKW1tubinno1_1280.jpg">
+      </a>
+    </li>
+    <li>
+      <a href="https://41.media.tumblr.com/758a5cb9046fde53138ad0f55527ca25/tumblr_ndyfdoR6Wp1tubinno1_1280.jpg">
+        <img src="https://41.media.tumblr.com/758a5cb9046fde53138ad0f55527ca25/tumblr_ndyfdoR6Wp1tubinno1_1280.jpg">
+      </a>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>
+
+
+<% end %>
